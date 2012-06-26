@@ -374,7 +374,7 @@ class GenericSpreadsheet
     else
       raise "unknown file type: #{ext}"
     end
-    if File.extname(filename).downcase != ext
+    if File.extname(filename).downcase != ext and false
       case @file_warning
       when :error
         warn correct_class
