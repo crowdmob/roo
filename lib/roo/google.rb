@@ -1,4 +1,4 @@
-require 'gdata/spreadsheet'
+# require 'gdata/spreadsheet' # this requires 'hoe' gem which is not available on heroku
 require 'xml'
 
 class GoogleHTTPError < RuntimeError; end
@@ -7,7 +7,7 @@ class GoogleWriteError < RuntimeError; end
 
 # overwrite some methods from the gdata-gem:
 module GData
-  class Spreadsheet < GData::Base
+  class Spreadsheet # < GData::Base # this requires 'hoe' gem which is not available on heroku
     
     def visibility
       @headers ? "private" : "public"
@@ -122,7 +122,7 @@ class Google < GenericSpreadsheet
     @date_format = '%d/%m/%Y'
     @datetime_format = '%d/%m/%Y %H:%M:%S' 
     @time_format = '%H:%M:%S'
-    @gs = GData::Spreadsheet.new(spreadsheetkey)
+    @gs = nil # GData::Spreadsheet.new(spreadsheetkey)  # this requires 'hoe' gem which is not available on heroku
     @gs.authenticate(user, password) unless user.empty? || password.empty?
     @sheetlist = @gs.sheetlist
     @default_sheet = self.sheets.first

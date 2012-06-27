@@ -132,20 +132,20 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<spreadsheet>, [">= 0.6.4"])
       s.add_runtime_dependency(%q<rubyzip>, [">= 0.9.1"])
       s.add_runtime_dependency(%q<hpricot>, [">= 0.6"])
-      s.add_runtime_dependency(%q<GData>, [">= 0.0.4"])
+      # s.add_runtime_dependency(%q<GData>, [">= 0.0.4"]) # this requires 'hoe' gem which is not available on heroku
       s.add_runtime_dependency(%q<libxml-ruby>, [">= 1.1.3"])
     else
       s.add_dependency(%q<spreadsheet>, [">= 0.6.4"])
       s.add_dependency(%q<rubyzip>, [">= 0.9.1"])
       s.add_dependency(%q<hpricot>, [">= 0.6"])
-      s.add_dependency(%q<GData>, [">= 0.0.4"])
+      # s.add_dependency(%q<GData>, [">= 0.0.4"]) # this requires 'hoe' gem which is not available on heroku
       s.add_dependency(%q<libxml-ruby>, [">= 1.1.3"])
     end
   else
     s.add_dependency(%q<spreadsheet>, [">= 0.6.4"])
     s.add_dependency(%q<rubyzip>, [">= 0.9.1"])
     s.add_dependency(%q<hpricot>, [">= 0.6"])
-    s.add_dependency(%q<GData>, [">= 0.0.4"])
+    # s.add_dependency(%q<GData>, [">= 0.0.4"]) # this requires 'hoe' gem which is not available on heroku
     s.add_dependency(%q<libxml-ruby>, [">= 1.1.3"])
   end
 end

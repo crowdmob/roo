@@ -20,7 +20,7 @@ begin
     s.add_dependency "spreadsheet", [">= 0.6.4"]
     s.add_dependency "rubyzip", [">= 0.9.1"]
     s.add_dependency "hpricot", [">= 0.6"]
-    s.add_dependency "GData", [">= 0.0.4"]
+    # s.add_dependency "GData", [">= 0.0.4"] # this requires 'hoe' gem which is not available on heroku
     s.add_dependency "libxml-ruby", [">= 1.1.3"]
   end
 rescue LoadError
